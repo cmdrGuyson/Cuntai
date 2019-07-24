@@ -1,0 +1,26 @@
+{
+  "name": "cuntai",
+  "version": "0.2.2",
+  "description": "ChatBot with an exotic twist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmdrGuyson/CuntAI-v0.0.1.git"
+  },
+  "author": "Guyson and Neith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmdrGuyson/CuntAI-v0.0.1/issues"
+  },
+  "homepage": "https://github.com/cmdrGuyson/CuntAI-v0.0.1#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "eslint": "^5.16.0",
+    "node-fetch": "^2.6.0",
+    "sequelize": "^5.8.9",
+    "sqlite3": "^4.0.8"
+  }
+}
