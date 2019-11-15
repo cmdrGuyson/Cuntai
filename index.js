@@ -17,6 +17,13 @@ const sequelize = new Sequelize("database", "user", "password", {
 
 });
 
+const Nickname = sequelize.define("nicknames", {
+	name: Sequelize.STRING,
+	username: {
+		type: Sequelize.STRING,
+		unique: true,
+	},
+});
 
 const Secrets = sequelize.define("tags", {
 	name: {
@@ -35,6 +42,7 @@ const Secrets = sequelize.define("tags", {
 // END DATABASE
 
 client.once("ready", ()=>{
+	Nickname.sync();
 	Secrets.sync();
 	console.log("Daddy I'm ready for you!");
 });
@@ -57,11 +65,17 @@ client.on("message", message =>{
 
 
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+	console.log(command);
 
 	if(!command) return;
 
 	try {
-		command.execute(message, Secrets, args);
+		if (command.name === "hey" || command.name === "forgetme") {
+			command.execute(message, Nickname, args);
+		}
+		else {
+			command.execute(message, Secrets, args);
+		}
 	}
 	catch (error) {
 		console.log(error);
