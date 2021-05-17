@@ -19,7 +19,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "eslint": "^5.16.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "sequelize": "^5.15.1",
     "sqlite3": "^4.0.8"
   }
