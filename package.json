@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/cmdrGuyson/CuntAI-v0.0.1#readme",
   "dependencies": {
+    "dayjs": "^1.10.4",
     "discord.js": "^11.5.1",
     "eslint": "^5.16.0",
     "node-fetch": "^2.6.0",
-    "sequelize": "^5.8.9",
+    "sequelize": "^5.15.1",
     "sqlite3": "^4.0.8"
   }
 }
